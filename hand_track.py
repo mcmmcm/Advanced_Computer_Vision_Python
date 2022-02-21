@@ -1,9 +1,10 @@
+import time
 from statistics import mode
+
 import cv2
 import mediapipe as mp
-import time
 
-WEBCAM_NUM = 0  # Windows number assigned to the webcam
+WEBCAM_NUM = 1  # Windows number assigned to the webcam
 
 mp_hands = mp.solutions.hands
 mp_drawing_utils = mp.solutions.drawing_utils
