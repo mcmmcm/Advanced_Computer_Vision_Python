@@ -62,6 +62,10 @@ def main():
 
     while True:
         success, img = cap.read()
+
+        flip_axis = 1   # Flip around y axis because of selfie camera
+        img = cv2.flip(img, flip_axis)
+
         hand_detector.find_hands(img, draw_landmark=True)
         hand_pos_pixel = hand_detector.retrieve_positions(img)
         if len(hand_pos_pixel) > 0:
